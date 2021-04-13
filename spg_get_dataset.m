@@ -74,7 +74,7 @@ std_positionsPtr.setdatatype('doublePtr',3,SpglibDataset.n_atoms);
 std_positions =std_positionsPtr.Value';
 SpglibDataset.std_positions  =    std_positions;
 % point_group_symbole
-SpglibDataset.pointgroup_symbol = string(char(SpglibDataset.pointgroup_symbol));
+SpglibDataset.pointgroup_symbol = string(strcat(char(SpglibDataset.pointgroup_symbol)));
 SpglibDataset.transformation_matrix = int32(reshape(SpglibDataset.transformation_matrix,3,3));
 SpglibDataset.primitive_lattice =(reshape(SpglibDataset.primitive_lattice,3,3));
 SpglibDataset.std_lattice =(reshape(SpglibDataset.std_lattice,3,3));

@@ -34,7 +34,7 @@ position = [[sites.rc1].',[sites.rc2].',[sites.rc3].'].';
 
 types = [];
 for i = 1:length(Atom_num)
-    types = [types;ones(1,Atom_num(i)*i)];
+    types = [types;ones(Atom_num(i),1)*i];
 end
 
 [num_atom,Rm_standard,position_standard,types_standard]=calllib('libsymspg','spg_standardize_cell',...
